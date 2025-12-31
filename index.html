@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <nav class="nav-bar">
+        <div class="logo">SkillCraft</div>
+      <ul class="nav-links">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+        <div class="menu-icon">☰</div>
+   </nav>
+       <section id="home">
+             <h1>SkillCraft InternShip Task 01</h1>
+             <p>Responsive Landing Page with Fixed Navigation and Smooth Scroll</p>
+             <button>More Info</button>
+       </section>
+       <section id="about">
+             <h1>About</h1>
+             <p>This landing page is created for the SkillCraft Web Development Internship to practice responsive design and fixed navigation bar with scroll effect.</p>
+       </section>
+       <section id="services">
+         <h1 class="heading">Services</h1>
+            <div class="services-container">
+               <div class="card">  
+                  <h2>Web Development</h2>
+                   <p>Creating simple and responsive websites using HTML, CSS & JavaScript.</p>
+               </div>
+               <div class="card">
+                   <h2>UI Design</h2>
+                   <p>Designing clean and user-friendly layouts that improve user experience.</p>
+               </div>
+               <div class="card">
+                  <h2>Responsive Design</h2>
+                  <p>Making web pages look perfect on mobile, tablet & desktop screens.</p>
+               </div>
+           </div>  
+       </section>
+       <section id="contact">
+             <h1>Contact</h1>
+            <p>If you have any project opportunities, feel free to reach out!</p>
+            <a href="contact.html" class="contact-btn" target="_blank">Contact Me</a>
+       </section>
+       <footer></footer>
+        <script>
+    const nav = document.querySelector(".nav-bar");
+    const menuIcon = document.querySelector(".menu-icon");
+    const navLinks = document.querySelector(".nav-links");
+
+    // Scroll Effect
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Toggle Menu
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
